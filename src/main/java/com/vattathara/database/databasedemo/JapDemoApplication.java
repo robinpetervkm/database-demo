@@ -25,23 +25,18 @@ public class JapDemoApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
+		logger.info(" \n All Users --> {}",jpaRepository.findAll());
 		
+		logger.info(" \n User id = 10001 --> {}",jpaRepository.findById(10001));
 		
-		logger.info(" User id = 10001 --> {}",jpaRepository.findById(10001));
+		jpaRepository.deleteById(10001);
 		
-		/*
-		logger.info(" All Users --> {}",jpaRepository.findAll());
-	
-
+		logger.info("\n insert {}",
+				jpaRepository.insert(new Person(10004,"Tara","Berlin",new Date())));
 		
-		logger.info(" Delete by id = 10002 --> no of rows affected {}",
-				jpaRepository.deleteById(10001));
-			*/
-		logger.info(" inserting by id = 10004 {}",
-				jpaRepository.insert(new Person(1004,"Tara","Berlin",new Date())));
+		logger.info("\n update by id = 10003 --> {}",
+				jpaRepository.update(new Person(10003,"RInu","USA",new Date())));
 		
-		logger.info(" update by id = 10003 --> {}",
-				jpaRepository.update(new Person(1003,"RInu","USA",new Date())));
-	
+		logger.info(" \n All Users --> {}",jpaRepository.findAll());
 	}
 }

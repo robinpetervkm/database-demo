@@ -1,12 +1,13 @@
 package com.vattathara.database.databasedemo.entity;
 
 import java.util.Date;
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.NamedQuery;
 
  @Entity
+ @NamedQuery(name = "find_all_persons",query="select p from Person p")
 public class Person {
 	 @Id
 	 @GeneratedValue
@@ -57,7 +58,7 @@ public class Person {
 	}
 	@Override
 	public String toString() {
-		return "Person [id=" + id + ", name=" + name + ", location=" + location + ", birthDate=" + birthDate + "]";
+		return "Person [id=" + id + ", name=" + name + ", location=" + location + ", birthDate=" + birthDate + "]" +"\n";
 	}
 
 }
