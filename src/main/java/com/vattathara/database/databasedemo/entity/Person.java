@@ -2,11 +2,16 @@ package com.vattathara.database.databasedemo.entity;
 
 import java.util.Date;
 
+
 public class Person {
 	private int id;
 	private String name;
 	private String location;
 	private Date dateBirth;
+	
+	public Person() {
+		
+	}
 	public Person(int id, String name, String location, Date dateBirth) {
 		super();
 		this.id = id;
@@ -37,6 +42,10 @@ public class Person {
 	}
 	public void setDateBirth(Date dateBirth) {
 		this.dateBirth = dateBirth;
+	}
+	@Override
+	public String toString() {
+		return "Person [id=" + id + ", name=" + name + ", location=" + location + ", dateBirth=" + dateBirth + "]";
 	}
 	
 }

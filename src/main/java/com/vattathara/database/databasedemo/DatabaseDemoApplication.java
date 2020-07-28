@@ -23,7 +23,9 @@ public class DatabaseDemoApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-		logger.info("DATABASE All Person Table Data _-_-_>>> {}",personJdbcDao.findAll());
+	
+		
+		logger.info(" All Users --> {}",personJdbcDao.findAll());
 	}
 
 }
