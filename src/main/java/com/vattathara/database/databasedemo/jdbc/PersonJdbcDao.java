@@ -44,7 +44,7 @@ public class PersonJdbcDao {
 				" insert into Person ("
 				+ " id,name,location,birth_date) values("
 				+ " ?,?,?,?)",new Object[] {person.getId(),person.getName(),
-						person.getLocation(),person.getDateBirth()});
+						person.getLocation(),person.getBirthDate()});
 	}
 	//update Person set (name=?,location=?,birth_date=?) where id = ? )
 	public int update(Person person){
@@ -54,7 +54,7 @@ public class PersonJdbcDao {
 						+ " where id = ?",new Object[] {person.getName(),
 								person.getLocation(),
 								new Timestamp (
-										person.getDateBirth().getTime()),
+										person.getBirthDate().getTime()),
 								person.getId()});
 	}
 }

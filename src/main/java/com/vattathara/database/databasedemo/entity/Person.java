@@ -2,22 +2,34 @@ package com.vattathara.database.databasedemo.entity;
 
 import java.util.Date;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 
+ @Entity
 public class Person {
+	 @Id
+	 @GeneratedValue
 	private int id;
 	private String name;
 	private String location;
-	private Date dateBirth;
+	private Date birthDate;
 	
 	public Person() {
 		
 	}
-	public Person(int id, String name, String location, Date dateBirth) {
+	public Person(int id, String name, String location, Date birthDate) {
 		super();
 		this.id = id;
 		this.name = name;
 		this.location = location;
-		this.dateBirth = dateBirth;
+		this.birthDate = birthDate;
+	}
+	public Person( String name, String location, Date birthDate) {
+		super();
+		this.name = name;
+		this.location = location;
+		this.birthDate = birthDate;
 	}
 	public int getId() {
 		return id;
@@ -37,15 +49,15 @@ public class Person {
 	public void setLocation(String location) {
 		this.location = location;
 	}
-	public Date getDateBirth() {
-		return dateBirth;
+	public Date getBirthDate() {
+		return birthDate;
 	}
-	public void setDateBirth(Date dateBirth) {
-		this.dateBirth = dateBirth;
+	public void setBirthDate(Date birthDate) {
+		this.birthDate = birthDate;
 	}
 	@Override
 	public String toString() {
-		return "Person [id=" + id + ", name=" + name + ", location=" + location + ", dateBirth=" + dateBirth + "]";
+		return "Person [id=" + id + ", name=" + name + ", location=" + location + ", birthDate=" + birthDate + "]";
 	}
-	
+
 }
