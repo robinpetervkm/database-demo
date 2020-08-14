@@ -1,4 +1,4 @@
-package com.vattathara.database.databasedemo;
+package com.in28minutes.database.databasedemo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -9,5 +9,4 @@ public class DatabaseDemoApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(DatabaseDemoApplication.class, args);
 	}
-
 }
