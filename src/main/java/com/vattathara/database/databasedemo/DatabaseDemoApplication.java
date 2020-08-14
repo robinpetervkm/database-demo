@@ -26,17 +26,33 @@ public class DatabaseDemoApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
+		try
+		{
+		    Thread.sleep(1000);
+		}
+		catch(InterruptedException ex)
+		{
+		    Thread.currentThread().interrupt();
+		}
+		System.out.println("Robin");
+		
 		logger.info(" All Users --> {}",personJdbcDao.findAll());
 		
 		logger.info(" User id = 10001 --> {}",personJdbcDao.findById(10001));
 		
-		logger.info(" Delete by id = 10002 --> no of rows affected {}",
-				personJdbcDao.deleteById(10001));
+		/*
+		 * logger.info(" Delete by id = 10002 --> no of rows affected {}",
+		 * personJdbcDao.deleteById(10001));
+		 */
 		
-		logger.info(" inserting by id = 10004 {}",
-				personJdbcDao.insert(new Person(1004,"Tara","Berlin",new Date())));
+		/*
+		 * logger.info(" inserting by id = 10004 {}", personJdbcDao.insert(new
+		 * Person(1004,"Tara","Berlin",new Date())));
+		 */
 		
-		logger.info(" update by id = 10003 --> {}",
-				personJdbcDao.update(new Person(1003,"RInu","USA",new Date())));
+		/*
+		 * logger.info(" update by id = 10003 --> {}", personJdbcDao.update(new
+		 * Person(1003,"RInu","USA",new Date())));
+		 */
 	}
 }
