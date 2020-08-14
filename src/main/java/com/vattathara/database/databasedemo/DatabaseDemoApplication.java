@@ -1,4 +1,4 @@
-package com.in28minutes.database.databasedemo;
+package com.vattathara.database.databasedemo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
